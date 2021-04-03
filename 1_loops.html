@@ -133,12 +133,12 @@
       document.getElementById('p7').innerHTML = txt;
 
       /*****************************/
-      // var person = { fname: 'John', lname: 'Doe', age: 25 };
-      // document.getElementById('p8').innerHTML = person.fname;
+      var person = { fname: 'John', lname: 'Doe', age: 25 };
+      document.getElementById('p8').innerHTML = person.fname;
 
-      // document.getElementById('p9').innerHTML = person['lname'];
-      // var prop = 'age';
-      // document.getElementById('p10').innerHTML = person[prop];
+      document.getElementById('p9').innerHTML = person['lname'];
+      var prop = 'age';
+      document.getElementById('p10').innerHTML = person[prop];
 
       /********** The For/In Loop ********/
       /*
@@ -146,11 +146,11 @@
             property.....
         }
       */
-      // txt = '';
-      // for (prop in person) {
-      //   txt += 'person[' + prop + '] = ' + person[prop] + '<br>';
-      // }
-      // document.getElementById('p11').innerHTML = txt;
+      txt = '';
+      for (prop in person) {
+        txt += 'person[' + prop + '] = ' + person[prop] + '<br>';
+      }
+      document.getElementById('p11').innerHTML = txt;
 
       /********* The For/Of Loop ************/
       /*
@@ -165,48 +165,49 @@
       //   txt += car + '<br>';
       // }
 
-      // txt = '';
-      // for (var car of cars) {
-      //   txt += car + '<br>';
-      // }
-      // document.getElementById('p12').innerHTML = txt;
+      txt = '';
+      for (var car of cars) {
+        txt += car + '<br>';
+      }
+      document.getElementById('p12').innerHTML = txt;
 
-      // var students = [
-      //   {
-      //     firstName: 'Asra',
-      //     lastName: 'Majd',
-      //     fullName: function () {
-      //       return this.firstName + ' ' + this.lastName;
-      //     },
-      //   },
-      //   {
-      //     firstName: 'Sepideh',
-      //     lastName: 'Mashayekhi',
-      //     fullName: function () {
-      //       return this.firstName + ' ' + this.lastName;
-      //     },
-      //   },
-      //   {
-      //     firstName: 'Shayan',
-      //     lastName: 'Vahid',
-      //     fullName: function () {
-      //       return this.firstName + ' ' + this.lastName;
-      //     },
-      //   },
-      //   {
-      //     firstName: 'Mahan',
-      //     lastName: 'Bakhtiarei',
-      //     fullName: function () {
-      //       return this.firstName + ' ' + this.lastName;
-      //     },
-      //   },
-      // ];
+      var students = [
+        {
+          firstName: 'Asra',
+          lastName: 'Majd',
+          fullName: function () {
+            return this.firstName + ' ' + this.lastName;
+          },
+        },
+        {
+          firstName: 'Sepideh',
+          lastName: 'Mashayekhi',
+          fullName: function () {
+            return this.firstName + ' ' + this.lastName;
+          },
+        },
+        {
+          firstName: 'Shayan',
+          lastName: 'Vahid',
+          fullName: function () {
+            return this.firstName + ' ' + this.lastName;
+          },
+        },
+        {
+          firstName: 'Mahan',
+          lastName: 'Bakhtiarei',
+          fullName: function () {
+            return this.firstName + ' ' + this.lastName;
+          },
+        },
+      ];
 
-      // txt = '';
-      // for (var student of students) {
-      //   txt += student.fullName() + '<br>';
-      // }
-      // document.getElementById('p13').innerHTML = txt;
+      txt = '';
+      for (var student of students) {
+        txt += student.fullName() + '<br>';
+      }
+      
+      document.getElementById('p13').innerHTML = txt;
     </script>
   </body>
 </html>
