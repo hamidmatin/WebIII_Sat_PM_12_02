@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+
+    <script>
+      const formatCurrency = function (currencySymbol, decimalSeparator) {
+        return function (value) {
+          const wholePart = Math.trunc(value / 100);
+          let fractionalPart = value % 100;
+          // if (fractionalPart < 10) {
+          //   fractionalPart = '0' + fractionalPart;
+          // }
+          fractionalPart = fractionalPart.toString().padStart(2, '0');
+
+          return `${currencySymbol}${wholePart}${decimalSeparator}${fractionalPart}`;
+        };
+      };
+
+      /*
+        1256 => 12.56$
+        1256 => 12.56E
+        1256 => 12/56ریال
+      */
+
+      const dollarCurrency = formatCurrency('$', '.')
+      const rialCurrency = formatCurrency('ریال', '/')
+      const euroCurrency = formatCurrency('€', '/')
+
+      document.getElementById('p1').innerHTML = dollarCurrency(1256)
+      document.getElementById('p2').innerHTML = rialCurrency(1256)
+      document.getElementById('p3').innerHTML = euroCurrency(5)
+    </script>
+  </body>
+</html>
