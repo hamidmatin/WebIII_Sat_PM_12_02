@@ -1,6 +1,6 @@
 .slider{
   width: 65%;
-  height: 500px;
+  height: 50vh;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -14,4 +14,16 @@
   position: relative;
   left: 0;
   transition: all .6s;
+}
+
+.btn-next, .btn-prev{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn-next{
+  left: 50px;
+}
+.btn-prev{
+  right: 50px;
 }
