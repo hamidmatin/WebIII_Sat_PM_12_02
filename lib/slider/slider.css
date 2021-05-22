@@ -1,0 +1,16 @@
+.slider{
+  width: 65%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.slider .item{
+  flex-shrink: 0;
+}
+.slider .slider-roller{
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all .6s;
+}
