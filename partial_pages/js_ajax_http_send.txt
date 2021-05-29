@@ -1,3 +1,0 @@
-
-<h1>AJAX - Send a Request To a Server</h1>
-    
